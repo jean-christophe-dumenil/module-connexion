@@ -20,10 +20,7 @@
                     <nav id="wrap">
                         <ul class="navbar">
                             <li><a href="index.php"></i>Accueil</a></li>
-                            <li><a href="profil.php"></i>Profil</a></li>
-                            <li><a href="livre-or.php"></i>Livre d'or</a></li>
-                            <li><a href="commentaire.php"></i>Commentaire</a></li>
-                        
+                            <li><a href="profil.php"></i>Profil</a></li>                      
                         
                             <li><a href="index.php?deconnexion=true">Déconnexion</a></li>
                         </ul>
@@ -33,9 +30,7 @@
                     ?>
                     <nav id="wrap">
                         <ul class="navbar">
-                            <li><a href="index.php"></i>Accueil</a></li>
-                            <li><a href="livre-or.php"></i>Livre d'or</a></li>
-                        </ul>
+                            <li><a href="index.php"></i>Accueil</a></li>                                                </ul>
                     </nav>
                     <?php   
                         }   
