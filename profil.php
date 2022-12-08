@@ -44,7 +44,7 @@
                         <label><b>Prénom :</b></label>
                         <input type="text" name="prenom" id="prenom"  placeholder="Entrez votre prénom" required>
                        
-                        <label><b>Mot de pasee :</b></label>
+                        <label><b>Mot de passe :</b></label>
                         <input type="password" name="password" id="password" placeholder="Entrez votre mot de passe" required>                      
                                                         
                         <input type="submit" value="Modifier">
