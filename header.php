@@ -14,13 +14,18 @@
 
                 else if (isset($_SESSION['login'])) {
                     $user = $_SESSION['login'];
-                    $id = $_SESSION['id'];
+                
                     // afficher les liens menus correspondants à la session
                     ?>
                     <nav id="wrap">
                         <ul class="navbar">
                             <li><a href="index.php"></i>Accueil</a></li>
-                            <li><a href="profil.php"></i>Profil</a></li>                      
+                            <li><a href="profil.php"></i>Profil</a></li>           
+                        <?php
+                            if($user == 'admin'){ // si l'utilisateur est admin il peut accéder à la page admin
+                        ?>
+                            <li><a href="admin.php"></i>Admin</a></li>
+                        <?php } ?>           
                         
                             <li><a href="index.php?deconnexion=true">Déconnexion</a></li>
                         </ul>

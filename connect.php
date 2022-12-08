@@ -1,6 +1,6 @@
 <?php
     // Connexion à la base de données
-    /*$db_username = 'root';
+    $db_username = 'root';
     $db_password = '';
     $db_name = 'moduleconnexion';
     $db_host = 'localhost';
@@ -9,8 +9,8 @@
     if(!$db) {
         echo "Connexion non établie.";
         exit;
-    }*/
-    $db_username = 'jeanchristophe';
+    }
+    /*$db_username = 'jeanchristophe';
     $db_password = 'Yuki121244!';
     $db_name = 'jean-christophe-dumenil_moduleconnexion';
     $db_host = 'localhost';
@@ -19,5 +19,5 @@
     if(!$db) {
         echo "Connexion non établie.";
         exit;
-    }
+    }*/
 ?>

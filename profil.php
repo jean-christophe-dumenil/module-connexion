@@ -32,8 +32,9 @@
             <div class="container_profil">  
                 <div class="information">
                     <form action="" method="post">
-                        
+                       
                         <h3>Modifiez vos informations</h3>
+                        
                         
                         <label><b>Login :</b></label>
                         <input type="text" placeholder="Entrer le login d'utilisateur" name="login" required>
@@ -42,10 +43,7 @@
                         <input type="text" name="nom" id="nom"  placeholder="Entrez votre nom" required>
 
                         <label><b>Prénom :</b></label>
-                        <input type="text" name="prenom" id="prenom"  placeholder="Entrez votre prénom" required>
-                       
-                        <label><b>Mot de passe :</b></label>
-                        <input type="password" name="password" id="password" placeholder="Entrez votre mot de passe" required>                      
+                        <input type="text" name="prenom" id="prenom"  placeholder="Entrez votre prénom" required>                 
                                                         
                         <input type="submit" value="Modifier">
                     </form>
@@ -58,7 +56,7 @@
                         $nom = $_POST['nom'];
                         $password = $_POST['password'];
                         if ($password != ""){
-                            $requete = "SELECT password FROM utilisateurs where login = '".$login."'";
+                            $requete = "SELECT * FROM utilisateurs where login = '".$login."'";
                             $exec_requete = $db -> query($requete);
                             $reponse = mysqli_fetch_array($exec_requete);
                             $password_hash = $reponse['password'];

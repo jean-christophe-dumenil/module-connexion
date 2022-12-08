@@ -2,9 +2,19 @@
     session_start();
     if(isset($_POST['username']) && isset($_POST['password'])){
     // connexion à la base de données
-    $db_username = 'jeanchristophe';
+    /*$db_username = 'jeanchristophe';
     $db_password = 'Yuki121244!';
     $db_name = 'jean-christophe-dumenil_moduleconnexion';
+    $db_host = 'localhost';
+    $db = mysqli_connect($db_host, $db_username, $db_password,$db_name)
+    or die('could not connect to database');
+    if(!$db) {
+        echo "Connexion non établie.";
+        exit;
+    }*/
+    $db_username = 'root';
+    $db_password = '';
+    $db_name = 'moduleconnexion';
     $db_host = 'localhost';
     $db = mysqli_connect($db_host, $db_username, $db_password,$db_name)
     or die('could not connect to database');
@@ -25,13 +35,15 @@
             $count = $reponse['count(*)'];
             if($count!=0) // nom d'utilisateur correct 
             {
-                $requete = "SELECT password from utilisateurs where `login` = '".$username."'";
+                $requete = "SELECT * from utilisateurs where `login` = '".$username."'";
                 $exec_requete = mysqli_query($db,$requete);
                 $reponse = mysqli_fetch_assoc($exec_requete);
                 if (password_verify($password,$reponse['password'])){  // mot de passe correct
                     $_SESSION['login'] = $username;
                     $_SESSION['connect'] = true;
-                    header('Location: index.php');
+                    $_SESSION['id'] = $reponse['id'];
+                    header('Location: profil.php');
+
                 }
                 else {
                     header('location: connexion.php?erreur=1'); // mot de passe incorrect
